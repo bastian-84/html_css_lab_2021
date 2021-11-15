@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'woff-font-01';
+    src: url('../fonts/woff-font-01.woff');
+    font-family: 'ttf-font-01';
+    src: url('../fonts/Branda-yolq.ttf');
+}
+
+
+body {
+    //background: #003;
+    background-image: linear-gradient(to right bottom, #051937, #002762, #00358f, #0041bd, #124beb);
+    height: 100vh;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+    /* flex */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+p, div {
+    color: #fff;
+}
+h2 {
+    padding: 1em 0 0 0;
+}
+
+// ~~~~~~~~~~~~~~ Font Tests ~~~~~~~~~~~~~ //
+.woff-test-01 {
+    color: #fff;
+    font-family: 'woff-font-01';
+}
+.ttf-test-01 {
+    color: #fff;
+    font-family: 'ttf-font-01';
+}
+
+// ~~~~~~~~~ CSS padding -% Test ~~~~~~~~~ //
+
+.cl-box-container {
+    border: dotted 2px grey;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.cl-box-item-00:nth-child(1) {
+    border: solid 2px darkcyan;
+    border-radius: 5px;
+    width: calc(100% + -30px);
+    height: 80px;
+    background-color: cadetblue;
+
+    //padding  calc px - %
+    padding: calc(100px - 5%);
+
+}
+.cl-box-item-00:nth-child(2) {
+    border: solid 2px darkcyan;
+    border-radius: 5px;
+    width: 100px;
+    height: 80px;
+    
+}
+
+.cl-box-item-00:nth-child(3) {
+    border: solid 2px darkcyan;
+    border-radius: 5px;
+    width: 100px;
+    height: 80px;
+
+}
+
+// ~~~~~~~~~~~ CSS var testing ~~~~~~~~~~~ //
+:root {
+    --blueTestVar: #1e90ff;
+}
+.css-testing-var {
+    color: var(--blueTestVar);
+}
